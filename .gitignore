@@ -1,5 +1,9 @@
 answers*.json
 scores*.json
+!studies/support-routing-2026-10-17/answers-openai.json
+!studies/support-routing-2026-10-17/answers-anthropic.json
+!studies/support-routing-2026-10-17/scores-openai.json
+!studies/support-routing-2026-10-17/scores-anthropic.json
 results/
 dist/
 .env
