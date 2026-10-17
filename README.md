@@ -8,6 +8,7 @@ The answer remains three fields: `queue`, `priority` and `escalate`. Richer scor
 
 - [Replay the historical study](REPLAY.md) without an account or model key.
 - [Follow the Orlo tutorial](TUTORIAL.md) to run your own comparison.
+- [Read the 500-case study](studies/support-routing-2026-10-17/README.md): 1,000 saved answers, format failures, contact-boundary errors and family-level diagnostics.
 - [Read the 20-case study](studies/support-routing-2026-10-16/support-routing/case-study.md), with saved answers, methods and a captioned console walkthrough.
 
 The historical study used dataset 0.1.0. Its results are not results for the 500-case dataset.

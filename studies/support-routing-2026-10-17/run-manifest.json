@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "dataset": {
+    "version": "0.3.1",
+    "artifact_sha256": "8ab4f99e1aa69ea3454c63d7c9242fbbf9cb6d6f4c75c6eea9fc9be59a3bffea",
+    "files": {
+      "dataset.json": "aa57cf22f22835f48513a1bb083eead6a20be24cbd76433b2a492ae83c614f6b",
+      "cases.jsonl": "bafa9d7201c851547a7ecb5a3d76fc24bebeca608afe91b58e550e098efb8d78",
+      "policy.md": "91b2922d96f76b6d4f82a59f10d4b8a10490342ccf681de342309da0cb16527b",
+      "output-schema.json": "2e744cdc489f2e3d4e470d63ae5f7ef882912989cdbe62290d12e460e173cb4e",
+      "task-spec.json": "779165e8d2270db45e8d2adfb7987163f910b50a6923f0e4feecd485acbef626",
+      "scoring.json": "a83d0213f80df42fb7d4070f52d210def761632dcf68dd20a165184f8e4696d6",
+      "scenarios.json": "60a4512cf18dde519d2833abefffe08201653a7748596ff6e7ac46e203768776",
+      "generation.json": "7c7b23bb5d20c02aee10fdd5c40482072758e7f1cbe0a7451947014228db7880",
+      "publication.json": "0b5d3f158214aeba1a38e7c0f15e4e526b3a39957d6d5d2ecb105396e435cf17"
+    }
+  },
+  "plan_sha256": "d91491aaf457e7dd85db8b27c7dffdc44a1c788feac0115810284d82f2631c75",
+  "plan_was_publicly_preregistered": false,
+  "execution": {
+    "started_at": "2026-10-17T22:41:02.185Z",
+    "completed_at": "2026-10-17T22:59:52.808Z",
+    "status": "completed",
+    "planned_cases": 500,
+    "planned_answers": 1000,
+    "saved_answers": 1000,
+    "native_grades_verified": 1000,
+    "provider_calls": 1000,
+    "failed_calls": 0,
+    "attempts_per_case_and_model": 1,
+    "provider_wire_requests_archived": false
+  },
+  "models": [
+    {
+      "provider": "anthropic",
+      "requested_model": "claude-sonnet-4-6",
+      "answers_file": "answers-anthropic.json",
+      "scores_file": "scores-anthropic.json",
+      "whole_answer_matches": 452,
+      "development_matches": 363,
+      "evaluation_matches": 89,
+      "failed_answers": 0,
+      "native_grades_verified": 500,
+      "specification_sha256": "399c8fa5865879720cf88096984c7dd9d1e776450c9285b273bc823cc46e1527"
+    },
+    {
+      "provider": "openai",
+      "requested_model": "gpt-5.4",
+      "answers_file": "answers-openai.json",
+      "scores_file": "scores-openai.json",
+      "whole_answer_matches": 494,
+      "development_matches": 400,
+      "evaluation_matches": 94,
+      "failed_answers": 0,
+      "native_grades_verified": 500,
+      "specification_sha256": "0d0c7ce5bf485ccb2d517dde16999b76fd1511ce26be14a028e8643809074faf"
+    }
+  ],
+  "ledger": [
+    {
+      "provider": "anthropic",
+      "requested_model": "claude-sonnet-4-6",
+      "returned_model": "claude-sonnet-4-6",
+      "outcome": "succeeded",
+      "calls": 500,
+      "calls_with_usage": 500,
+      "input_tokens": 374396,
+      "output_tokens": 13864,
+      "ledger_cost_estimate_usd": 1.331148,
+      "first_call_at": "2026-10-17T22:41:02.429104+00:00",
+      "last_call_at": "2026-10-17T22:59:35.284517+00:00",
+      "price_input_per_million_min": 3,
+      "price_input_per_million_max": 3,
+      "price_output_per_million_min": 15,
+      "price_output_per_million_max": 15
+    },
+    {
+      "provider": "openai",
+      "requested_model": "gpt-5.4",
+      "returned_model": "gpt-5.4-2026-03-05",
+      "outcome": "succeeded",
+      "calls": 500,
+      "calls_with_usage": 500,
+      "input_tokens": 337387,
+      "output_tokens": 9090,
+      "ledger_cost_estimate_usd": 0.9798175,
+      "first_call_at": "2026-10-17T22:41:39.763299+00:00",
+      "last_call_at": "2026-10-17T22:59:52.776694+00:00",
+      "price_input_per_million_min": 2.5,
+      "price_input_per_million_max": 2.5,
+      "price_output_per_million_min": 15,
+      "price_output_per_million_max": 15
+    }
+  ],
+  "parameters": {
+    "evidence": "Reconstructed from the unchanged provider caller used by this run, not an archive of outbound request bodies. Null means omitted, not zero.",
+    "openai": {
+      "max_completion_tokens": 4096,
+      "temperature": null,
+      "reasoning_effort": null,
+      "seed": null
+    },
+    "anthropic": {
+      "max_tokens": 4096,
+      "temperature": 0,
+      "thinking": null,
+      "effort": null,
+      "seed": null
+    }
+  },
+  "usage": {
+    "reported_input_tokens": 711783,
+    "reported_output_tokens": 22954,
+    "reported_tokens": 734737,
+    "ledger_cost_estimate_usd": 2.3109655,
+    "comparison_cost_estimate_usd": 2.3109655000000004,
+    "invoice_verified": false,
+    "note": "Both candidates combined. Estimates use recorded input/output tokens and saved per-million rates; no provider invoice or additional cache/reasoning billing categories were independently reconciled."
+  },
+  "review": {
+    "independent_human_reviews": 0,
+    "labels": "provisional",
+    "release_test": false,
+    "production_release_created": false
+  },
+  "reproducibility": {
+    "grading": "Recompute both score files from the saved answers with the root scorer.",
+    "generation": "New provider calls may differ; this is not a guarantee of identical outputs.",
+    "comparison_to_pilot": "The earlier 20-case study used a different policy and cases. Differences are not a measured improvement."
+  }
+}

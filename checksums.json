@@ -17,7 +17,7 @@
   "cli.mjs": "0d9721f435c22c45e0000f5835a078802c87fb2d92ed3d0a4a9d8371dcce1067",
   "score.mjs": "8682215338e6776e3fe69a88f1e7f58be818ff73c0ad53bbd39c8afe4bc4c3f1",
   "rich-score.mjs": "6da6605d9baf05cec3538a193115dad8cf729295962af65ac4ac5f2a256d4f2f",
-  "README.md": "0463183af1ab71fbec2305ccd1d697b81e8f2d297f789d0ab2c89a0a68d3e81c",
+  "README.md": "6566719076a41b7f1dea880159e947f829282538326c43d749880f1569171612",
   "dataset-card.md": "44fbe62133c616d8586b3a82e12154a03240e3cc6091b208ee4b95ca4b5969c7",
   "SCORING.md": "bf108d10d1df5161be763d4e4fcb1519183b5332c3e5285c8ed37536e3b9d30e",
   "CHANGELOG.md": "efdfaf93327caccc5a3e5146301ae484a1b0b4103f1ba549315190231447fd0b",
@@ -32,7 +32,7 @@
   "CONTRIBUTING.md": "64f2797fce32c0227f8f33b20e1ca9b5b90ce4529c04c55a88565d722e3a7e32",
   "CITATION.cff": "e2d59ffe2b6ced84727402a3cfcf570ff9dec93a39fbf698bde58836d8a93874",
   ".gitignore": "1343dc85bdfe950f8770360e6ed832ef0462a70279bcc82c644d23508bfd73b7",
-  ".github/workflows/validate.yml": "e6c1bf7d7edf959ee7811fd25eeeee5e27ff259e68e95cfaaf4c5ebcbe8d27bf",
+  ".github/workflows/validate.yml": "5e49d82ace89001695bae4fb4bb678b50e7fa24f349f112fff5b179d11c71287",
   "replay-study.mjs": "b060647df3114e5ce8199a8231d3595c18301f9055c47ee16444ac45887f80c9",
   "REPLAY.md": "14d485d6345d35a959096032c7ffc635113a05806d6ad8b28d8a99834d9510d1",
   "collect-orlo.mjs": "f7ac246a47fb72f62160a7bceac12e23d98d1ec771a6dffafdd3a13492dfe9cd",
@@ -62,5 +62,14 @@
   "studies/support-routing-2026-10-16/support-routing/media/poster.png": "96a0c8e98da12ef0abc79e313a83219406100a18dfb7343225488960fff5d8c2",
   "studies/support-routing-2026-10-16/support-routing/media/captions.vtt": "774fd0a0890e514eb1208d9972164213bbc0fb27e0b6deda9466db1850a08d34",
   "studies/support-routing-2026-10-16/README.md": "4cc1ca725f020c05703c4361d8c54558f7791f5f1104f31a5f303fc99c98e97d",
-  "studies/support-routing-2026-10-16/checksums.json": "303c7d1029f2c1af16c8d5722c3171571dcd458951c0eafb7edbd06e02436bd4"
+  "studies/support-routing-2026-10-16/checksums.json": "303c7d1029f2c1af16c8d5722c3171571dcd458951c0eafb7edbd06e02436bd4",
+  "studies/support-routing-2026-10-17/plan.json": "ce57dc1e3ac9ef7f3f8d2fc8b5c1d683f446d295d9319ec5d8a62f798e109415",
+  "studies/support-routing-2026-10-17/run-manifest.json": "b05043623e91a677fcee014e8a8265d8ef1ce24f3d92cd82f449d02989fdf340",
+  "studies/support-routing-2026-10-17/answers-openai.json": "6ec91e8b65c3c4319c0800f4dedd992620a7fb2b2284698de160fce104ee9a53",
+  "studies/support-routing-2026-10-17/answers-anthropic.json": "7e2e2bf7f2f1051d9a8aa0714714347141bffd39bb5210e4ce5212d46b34019c",
+  "studies/support-routing-2026-10-17/scores-openai.json": "27c350a50727d414e612d5b5e74f96d547d548bcabf249e9d97d033b5a1b60ad",
+  "studies/support-routing-2026-10-17/scores-anthropic.json": "2f16dfa6ed794c2b5d36ad248b68761639eba65a9ed1c21f129db6d6651c3b6e",
+  "studies/support-routing-2026-10-17/README.md": "8e8a449aaec7da1e6490ee6911f218d8294562b09f92fe4ba79414a2bdc40e37",
+  "studies/support-routing-2026-10-17/queue-matches.svg": "741a0cd404521482e707d9f49eaececb09e9e68be2592dcd9727378b7f2c2394",
+  "verify-expanded.test.mjs": "0588550983c39e331c6029421fe11033a0452e27bac5247b2713ba0e8618ca66"
 }

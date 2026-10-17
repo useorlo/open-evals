@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "dataset": {
+    "id": "support/ticket-routing",
+    "version": "0.3.1",
+    "artifact_sha256": "8ab4f99e1aa69ea3454c63d7c9242fbbf9cb6d6f4c75c6eea9fc9be59a3bffea",
+    "files": {
+      "dataset.json": "aa57cf22f22835f48513a1bb083eead6a20be24cbd76433b2a492ae83c614f6b",
+      "cases.jsonl": "bafa9d7201c851547a7ecb5a3d76fc24bebeca608afe91b58e550e098efb8d78",
+      "policy.md": "91b2922d96f76b6d4f82a59f10d4b8a10490342ccf681de342309da0cb16527b",
+      "output-schema.json": "2e744cdc489f2e3d4e470d63ae5f7ef882912989cdbe62290d12e460e173cb4e",
+      "task-spec.json": "779165e8d2270db45e8d2adfb7987163f910b50a6923f0e4feecd485acbef626",
+      "scoring.json": "a83d0213f80df42fb7d4070f52d210def761632dcf68dd20a165184f8e4696d6",
+      "scenarios.json": "60a4512cf18dde519d2833abefffe08201653a7748596ff6e7ac46e203768776",
+      "generation.json": "7c7b23bb5d20c02aee10fdd5c40482072758e7f1cbe0a7451947014228db7880",
+      "publication.json": "0b5d3f158214aeba1a38e7c0f15e4e526b3a39957d6d5d2ecb105396e435cf17"
+    }
+  },
+  "frozen_at": "2026-10-17T22:40:55.221Z",
+  "models": [
+    {
+      "provider": "openai",
+      "requested_model": "gpt-5.4"
+    },
+    {
+      "provider": "anthropic",
+      "requested_model": "claude-sonnet-4-6"
+    }
+  ],
+  "selection_reason": "Same two models as the historical pilot, to exercise the expanded policy coverage across the same provider paths; not a latest-model ranking.",
+  "planned_cases": 500,
+  "planned_answers": 1000,
+  "attempts_per_case_and_model": 1,
+  "partitions": {
+    "development": 400,
+    "evaluation": 100
+  },
+  "scoring": {
+    "schema_weight": 0,
+    "semantic_weight": 0,
+    "judge_weight": 0,
+    "state_change_weight": 0,
+    "exact_match_weight": 1
+  },
+  "config": {
+    "exact_match": true,
+    "exact_match_mode": "json",
+    "early_stopping": false,
+    "include_retrieval_context": false
+  },
+  "budget": {
+    "max_cost_usd": 5,
+    "max_tokens": 1000000,
+    "max_runtime_minutes": 60
+  },
+  "no_tuning_between_partitions": true,
+  "independent_human_reviews": 0,
+  "review": "Automated invariants and author consistency checks only; labels remain provisional.",
+  "release_test": false
+}
