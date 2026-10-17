@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "id": "support/ticket-routing",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "status": "public_draft",
   "policy": "policy.md",
   "cases": "cases.jsonl",
@@ -39,26 +39,27 @@
     "public_release_allowed": true
   },
   "license": {
-    "data": "UNLICENSED",
-    "code": "UNLICENSED",
-    "documentation": "UNLICENSED"
+    "data": "CC-BY-4.0",
+    "code": "MIT",
+    "documentation": "CC-BY-4.0"
   },
   "limits": [
     "AI-authored policy interpretations and labels; no independent human review.",
     "500 rows contain 91 related scenario families. Treat families, not rows, as the diversity unit.",
     "Visible family-separated partitions; no unseen holdout or representative production distribution.",
-    "No model has been run on this version. Results from 0.1.0 do not apply.",
+    "No model results were used to select or revise these references. Historical 0.1.0 results do not apply.",
     "Relative severity weights are proposed assumptions, not monetary costs or measured business impact."
   ],
   "parent": {
-    "version": "0.2.0",
-    "artifact_sha256": "0f3962dc68b2b16b6670ef3833e430009034a02f81f86b6540b87e5d8e5c28a1"
+    "version": "0.3.0",
+    "artifact_sha256": "137218739723f167c95586ca5d489e5b5d56cabf9c8b2effddb2e5eec537c59b"
   },
   "execution": {
     "model_runs": 0,
     "results_inherited": false,
     "comparison_purpose": "development",
-    "release_test_in_export": false
+    "release_test_in_export": false,
+    "snapshot": "artifact_preparation_before_comparison"
   },
   "artifact_files": [
     "dataset.json",

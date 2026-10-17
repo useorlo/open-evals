@@ -5,11 +5,10 @@
   "authorized_on": "2026-10-17",
   "review_status": "unreviewed",
   "human_reviewed_cases": 0,
-  "model_runs": 0,
   "license": {
-    "data": "UNLICENSED",
-    "code": "UNLICENSED",
-    "documentation": "UNLICENSED"
+    "data": "CC-BY-4.0",
+    "code": "MIT",
+    "documentation": "CC-BY-4.0"
   },
-  "note": "Published at the repository owner's request for inspection and review. Publication does not constitute label adjudication, model performance evidence or release qualification. Reuse licensing is pending."
+  "note": "Publication and reuse licenses do not constitute independent label adjudication or model-release qualification."
 }

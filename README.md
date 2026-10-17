@@ -1,6 +1,6 @@
 # Evaluate support routing on 500 synthetic cases
 
-This draft tests whether a model routes fictional support tickets according to a stated policy. It includes 500 cases, reference answers, rationales, family-separated partitions and an offline scorer. You can use the data without Orlo. The references are provisional: no person has independently reviewed them, and no model comparison has run on this version.
+This draft tests whether a model routes fictional support tickets according to a stated policy. It includes 500 cases, reference answers, rationales, family-separated partitions and an offline scorer. You can use the data without Orlo. The references are provisional: no person has independently reviewed them, and model results must be interpreted against that limit.
 
 The answer remains three fields: `queue`, `priority` and `escalate`. Richer scoring adds diagnostics without requiring a different model response. Read the [dataset card](dataset-card.md), [policy](policy.md) and [scoring guide](SCORING.md) before interpreting results.
 
@@ -31,7 +31,7 @@ Keep the references, rationales, tags and scoring report outside the prompt. Sen
 
 ## Use with Orlo or another harness
 
-The Orlo export contains a task, 500 sample payloads with provenance, and comparison settings. Supply the task/dataset and candidate identifiers through the normal API workflow. These are payload templates, not an installer. Compare the evaluation partition only after fixing the prompt and settings against development cases.
+The Orlo export contains a task, 500 sample payloads with provenance, and comparison settings. The task template sets a required release policy: submit it as a signed-in person or management principal. A runtime key cannot set that policy. The tutorial explains the separate setup step. Supply the task/dataset and candidate identifiers through the normal API workflow. These are payload templates, not an installer. Compare the evaluation partition only after fixing the prompt and settings against development cases.
 
 The comparison template uses JSON exact matching and has **no release test**. Its ceilings are $5, 1,000,000 tokens and 30 minutes. These are spend limits, not an estimate or a guarantee that every candidate completes. Choose limits and models deliberately before starting. This dataset alone does not qualify a release.
 
@@ -41,6 +41,6 @@ Orlo's current comparison surface supplies the exact-match results. The addition
 
 The export includes `review-worksheet.csv`, with blank reviewer, decision, corrected-label and policy-gap columns. Review every family and transformation assumption; inspect disagreements against the policy before changing labels. Review all labels before calling the full dataset reviewed. Make policy or reference changes in a new version and rerun affected comparisons.
 
-This is a public, **UNLICENSED** research draft. Publication makes the files available for inspection; it does not grant a reuse license or certify the reference labels. See [publication metadata](publication.json) for the current status. The earlier 20-case study is separate. Its results do not apply to these 500 cases.
+Data and documentation are licensed under **CC BY 4.0**; the scoring tools are **MIT** licensed. You can use the dataset in Orlo or another harness, modify it and share it with the required attribution. See [LICENSE.md](LICENSE.md). The licenses do not certify the reference labels. See [publication metadata](publication.json) for the current status. The earlier 20-case study is separate. Its results do not apply to these 500 cases.
 
 `checksums.json` records the file digests. [Generation metadata](generation.json) records the authoring method, source hashes and earlier dataset identity. This repository includes the finished cases and authored scenario briefs, but not the original authoring environment. You can validate and score the cases independently; the recorded generator hash is provenance, not a claim that this repository reproduces that environment.

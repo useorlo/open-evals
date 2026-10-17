@@ -1,7 +1,7 @@
 {
   "dataset": "support/ticket-routing",
-  "version": "0.3.0",
-  "artifact_sha256": "137218739723f167c95586ca5d489e5b5d56cabf9c8b2effddb2e5eec537c59b",
+  "version": "0.3.1",
+  "artifact_sha256": "8ab4f99e1aa69ea3454c63d7c9242fbbf9cb6d6f4c75c6eea9fc9be59a3bffea",
   "cases": 500,
   "families": 91,
   "inherited_cases": 32,

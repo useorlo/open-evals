@@ -102,6 +102,12 @@ async function main(){
       for(const name of ['cases.csv','review-worksheet.csv'])files[name]=digest(await readFile(out+name));
       for(const name of ['cli.mjs','score.mjs','rich-score.mjs']){await copyFile(root+name,out+name);files[name]=digest(await readFile(out+name));}
       for(const name of ['README.md','dataset-card.md','SCORING.md','CHANGELOG.md','coverage-report.json']){await copyFile(pack.directory+name,out+name);files[name]=digest(await readFile(out+name));}
+      if(pack.manifest.license.data==='CC-BY-4.0'){
+        for(const name of ['CC-BY-4.0.txt','MIT.txt','LICENSE.md']){
+          try{await copyFile(pack.directory+name,out+name);}catch(error){if(error.code!=='ENOENT')throw error;await copyFile(root+(name==='LICENSE.md'?'public-repo/':'licenses/')+name,out+name);}
+          files[name]=digest(await readFile(out+name));
+        }
+      }
       for(const split of Object.keys(pack.manifest.splits)){
         assert.ok(/^[a-z]+$/.test(split),'Invalid split name');
         const name=split+'.jsonl';await writeFile(out+name,pack.cases.filter(c=>c.split===split).map(c=>JSON.stringify(c)).join('\n')+'\n');files[name]=digest(await readFile(out+name));

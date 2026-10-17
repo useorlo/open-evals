@@ -1,3 +1,9 @@
+# Support routing 0.3.1
+
+Granted CC BY 4.0 for data and documentation and MIT for tools. Preserved all 500 case bytes, policy, schema, scoring and partitions from 0.3.0. The new artifact hash reflects license and publication metadata, not new labels or better model results.
+
+Added full license texts and citation metadata. Independent human label review remains outstanding.
+
 # Support routing 0.3.0 draft
 
 Expanded the separate 32-case review draft to 500 cases across 91 families. Added 78 scenario briefs and six deterministic variants per brief, with 390 explicit base/variant links. The original 32 inputs and reference answers are preserved.

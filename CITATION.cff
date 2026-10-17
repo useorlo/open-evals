@@ -1,10 +1,11 @@
 cff-version: 1.2.0
-message: "Please cite this dataset version and its artifact hash when reporting results. Citation does not grant a reuse license."
+message: "Please cite this dataset version and its artifact hash when reporting results."
 title: "Orlo Support Routing: 500 Synthetic Cases"
 type: dataset
 authors:
   - name: Orlo
-version: 0.3.0
+version: 0.3.1
 date-released: 2026-10-17
 url: "https://github.com/useorlo/open-evals"
-abstract: "An unreviewed synthetic support-routing draft with 500 cases in 91 families, a declared policy, provisional reference answers and deterministic offline scoring. No model performance results are included."
+abstract: "An unreviewed synthetic support-routing draft with 500 cases in 91 families, a declared policy, provisional reference answers and deterministic offline scoring. Model studies are separately versioned."
+license: CC-BY-4.0

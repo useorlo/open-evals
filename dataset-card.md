@@ -1,4 +1,4 @@
-# Support routing 0.3.0
+# Support routing 0.3.1
 
 Five hundred fictional English-language support tickets test queue selection, priority and escalation for a B2B software company. The set expands coverage of policy boundaries and gives builders specific errors to investigate. It does not measure production prevalence or establish that a model is safe to release.
 
@@ -31,7 +31,7 @@ All members of a family stay in one partition. New evaluation families were sele
 
 ## Authorship and quality checks
 
-Codex authored the scenario briefs, rationales and proposed labels. A deterministic generator applied the six variant types. The same authoring process produced the labels and their explanations, so these are not independent judgments. The exact authoring model snapshot was not independently recorded. There were no separate provider generation calls, paid comparison calls or human reviews for this version.
+Codex authored the scenario briefs, rationales and proposed labels. A deterministic generator applied the six variant types. The same authoring process produced the labels and their explanations, so these are not independent judgments. The exact authoring model snapshot was not independently recorded. Dataset preparation used no separate provider generation calls or human reviews. Model studies are published separately from the frozen dataset.
 
 [Generation metadata](generation.json) records source hashes, parent identity and generator identity. [Coverage results](coverage-report.json) record counts and automated checks. Checks cover the input/output shape, unique normalized inputs, required coverage tags, family separation, tier-only pairs, escalation invariants and declared counterfactual relationships. A word five-gram similarity screen found no pairs from different families at or above 0.65 Jaccard similarity. That lexical screen does not establish semantic independence or label correctness.
 
@@ -41,4 +41,4 @@ Report exact matches together with schema failures, escalation misses and false 
 
 All labels remain unreviewed. Many tickets make the relevant facts unusually explicit. The set lacks real customer ambiguity, multilingual traffic, attachments, production frequency estimates and broad paraphrase diversity. Eight instruction-pressure patterns are reused across the new families; these do not constitute a comprehensive adversarial benchmark. It is useful for finding specified policy failures, not for claiming general resilience to prompt injection.
 
-No model results are included for 0.3.0. The 0.1.0 study's 19-of-20 outcomes must not be presented as results for this version. The proposed priority-loss weights are relative severity assumptions, not money. Public licensing and human review remain outstanding.
+Version 0.3.1 licenses the 0.3.0 cases without changing their bytes, policy, scoring or partitions. Study results are separate artifacts. The 0.1.0 study's 19-of-20 outcomes must not be presented as results for this version. The proposed priority-loss weights are relative severity assumptions, not money. Independent human review remains outstanding. Data and documentation are CC BY 4.0; tools are MIT licensed.

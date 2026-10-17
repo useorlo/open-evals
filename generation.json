@@ -40,5 +40,12 @@
   "caveats": [
     "Scenario text, reference labels and transformations share an authoring process; deterministic checks cannot establish their independent correctness.",
     "No claim of random generation, independent model critique, or verified human review."
-  ]
+  ],
+  "reissue": {
+    "from_version": "0.3.0",
+    "artifact_sha256": "137218739723f167c95586ca5d489e5b5d56cabf9c8b2effddb2e5eec537c59b",
+    "reason": "License metadata only; original case bytes, policy, scoring rules and partitions retained.",
+    "cases_sha256": "bafa9d7201c851547a7ecb5a3d76fc24bebeca608afe91b58e550e098efb8d78",
+    "new_generation_calls": 0
+  }
 }
