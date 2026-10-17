@@ -1,0 +1,7 @@
+answers*.json
+scores*.json
+results/
+dist/
+.env
+.env.*
+.DS_Store

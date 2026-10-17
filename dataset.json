@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "id": "support/ticket-routing",
+  "version": "0.3.0",
+  "status": "public_draft",
+  "policy": "policy.md",
+  "cases": "cases.jsonl",
+  "output_schema": "output-schema.json",
+  "case_count": 500,
+  "splits": {
+    "development": 400,
+    "evaluation": 100
+  },
+  "grading": {
+    "method": "json_exact",
+    "version": 2,
+    "primary": "whole_answer_exact",
+    "diagnostics": [
+      "schema_validity",
+      "field_accuracy",
+      "queue_precision_recall_f1",
+      "priority_confusion",
+      "priority_under_over_rates",
+      "priority_weighted_loss",
+      "escalation_precision_recall_f1",
+      "missed_escalations",
+      "unnecessary_escalations",
+      "family_macro_accuracy",
+      "all_variants_match_rate",
+      "slice_breakdowns",
+      "counterfactual_consistency"
+    ],
+    "missing_output": "failure",
+    "missing_label": "invalid_dataset",
+    "release_eligible": false
+  },
+  "review": {
+    "human_reviewed_cases": 0,
+    "public_release_allowed": true
+  },
+  "license": {
+    "data": "UNLICENSED",
+    "code": "UNLICENSED",
+    "documentation": "UNLICENSED"
+  },
+  "limits": [
+    "AI-authored policy interpretations and labels; no independent human review.",
+    "500 rows contain 91 related scenario families. Treat families, not rows, as the diversity unit.",
+    "Visible family-separated partitions; no unseen holdout or representative production distribution.",
+    "No model has been run on this version. Results from 0.1.0 do not apply.",
+    "Relative severity weights are proposed assumptions, not monetary costs or measured business impact."
+  ],
+  "parent": {
+    "version": "0.2.0",
+    "artifact_sha256": "0f3962dc68b2b16b6670ef3833e430009034a02f81f86b6540b87e5d8e5c28a1"
+  },
+  "execution": {
+    "model_runs": 0,
+    "results_inherited": false,
+    "comparison_purpose": "development",
+    "release_test_in_export": false
+  },
+  "artifact_files": [
+    "dataset.json",
+    "cases.jsonl",
+    "policy.md",
+    "output-schema.json",
+    "task-spec.json",
+    "scoring.json",
+    "scenarios.json",
+    "generation.json",
+    "publication.json"
+  ],
+  "task_spec": "task-spec.json",
+  "scoring": "scoring.json"
+}

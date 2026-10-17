@@ -1,0 +1,136 @@
+{
+  "dataset": "support/ticket-routing",
+  "version": "0.3.0",
+  "artifact_sha256": "137218739723f167c95586ca5d489e5b5d56cabf9c8b2effddb2e5eec537c59b",
+  "cases": 500,
+  "families": 91,
+  "inherited_cases": 32,
+  "new_cases": 468,
+  "human_reviewed_cases": 0,
+  "model_runs": 0,
+  "splits": {
+    "development": {
+      "cases": 400,
+      "families": 71,
+      "queue": {
+        "account_access": 72,
+        "billing": 101,
+        "general": 42,
+        "security": 90,
+        "technical": 95
+      },
+      "priority": {
+        "high": 91,
+        "normal": 244,
+        "urgent": 65
+      },
+      "escalation_positive": 119
+    },
+    "evaluation": {
+      "cases": 100,
+      "families": 20,
+      "queue": {
+        "account_access": 18,
+        "billing": 22,
+        "general": 8,
+        "security": 25,
+        "technical": 27
+      },
+      "priority": {
+        "high": 26,
+        "normal": 56,
+        "urgent": 18
+      },
+      "escalation_positive": 32
+    }
+  },
+  "queue": {
+    "account_access": 90,
+    "billing": 123,
+    "general": 50,
+    "security": 115,
+    "technical": 122
+  },
+  "priority": {
+    "high": 117,
+    "normal": 300,
+    "urgent": 83
+  },
+  "customer_tier": {
+    "premium": 83,
+    "standard": 417
+  },
+  "prior_contacts": {
+    "0": 339,
+    "1": 80,
+    "2": 29,
+    "3": 26,
+    "5": 26
+  },
+  "escalation_positive": 151,
+  "nonurgent_escalations": 68,
+  "tags": {
+    "access_security_overlap": 14,
+    "active_security": 37,
+    "chat_transcript": 6,
+    "core_blockage": 36,
+    "credential_exposure": 6,
+    "duplicate_charge": 24,
+    "hypothetical": 37,
+    "instruction_pressure": 78,
+    "long_context": 48,
+    "missing_information": 49,
+    "multi_intent": 50,
+    "multi_user_nonoutage": 12,
+    "negation": 56,
+    "nonurgent_escalation": 67,
+    "optional_feature": 12,
+    "outage": 37,
+    "prior_contact_boundary": 159,
+    "prompt_injection": 90,
+    "queue_overlap": 20,
+    "quoted_instruction": 6,
+    "quoted_log": 6,
+    "repeat_contact": 2,
+    "resolved_incident": 43,
+    "routine_access": 24,
+    "routine_billing": 36,
+    "routine_howto": 19,
+    "routine_security": 2,
+    "security": 3,
+    "security_howto": 42,
+    "single_user_blockage": 36,
+    "tier_counterfactual": 82,
+    "time_context": 6,
+    "uncertainty": 24,
+    "unrelated_contact_history": 79,
+    "urgency_pressure": 14
+  },
+  "counterfactual_pairs": 390,
+  "words": {
+    "minimum": 11,
+    "median": 49,
+    "maximum": 194
+  },
+  "overlap_check": {
+    "method": "Lowercased word 5-gram Jaccard across distinct families",
+    "threshold": 0.65,
+    "flagged": [],
+    "limitation": "A lexical screen, not an embedding or semantic-independence test. Boilerplate and scenario topics can overlap below this threshold."
+  },
+  "checks": [
+    "unique_normalized_inputs",
+    "family_split_separation",
+    "required_tags_present",
+    "escalation_invariants",
+    "six_variants_per_new_family",
+    "counterfactual_reference_consistency",
+    "tier_changes_only_tier"
+  ],
+  "limitations": [
+    "All reference labels remain unreviewed.",
+    "91 related families, not 500 independent observations.",
+    "Visible partitions with related topics; no private holdout.",
+    "AI-authored, often explicit language does not reproduce the full ambiguity or prevalence of customer tickets."
+  ]
+}

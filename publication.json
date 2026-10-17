@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "status": "public_draft",
+  "repository": "https://github.com/useorlo/open-evals",
+  "authorized_on": "2026-10-17",
+  "review_status": "unreviewed",
+  "human_reviewed_cases": 0,
+  "model_runs": 0,
+  "license": {
+    "data": "UNLICENSED",
+    "code": "UNLICENSED",
+    "documentation": "UNLICENSED"
+  },
+  "note": "Published at the repository owner's request for inspection and review. Publication does not constitute label adjudication, model performance evidence or release qualification. Reuse licensing is pending."
+}

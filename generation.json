@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "run_id": "support-routing-0.3.0-authored-2026-10-17",
+  "authored_on": "2026-10-17",
+  "method": "78 AI-authored scenario briefs, explicit candidate labels and six deterministic variants per brief, plus 32 inherited records.",
+  "authoring_tool": "Codex",
+  "authoring_model_id": null,
+  "authoring_model_note": "The session did not record an independently verifiable model snapshot for scenario authoring.",
+  "provider_generation_calls": 0,
+  "human_reviews": 0,
+  "independent_label_adjudication": false,
+  "generator": {
+    "file": "build-support-500.mjs",
+    "sha256": "e38ef4ca31092be6c3271099c5998e6c541a9ccc77668da46b12b317e10f709b"
+  },
+  "source_hashes": {
+    "scenarios.json": "60a4512cf18dde519d2833abefffe08201653a7748596ff6e7ac46e203768776",
+    "task-spec.json": "779165e8d2270db45e8d2adfb7987163f910b50a6923f0e4feecd485acbef626",
+    "scoring.json": "a83d0213f80df42fb7d4070f52d210def761632dcf68dd20a165184f8e4696d6",
+    "policy.md": "91b2922d96f76b6d4f82a59f10d4b8a10490342ccf681de342309da0cb16527b"
+  },
+  "parent": {
+    "version": "0.2.0",
+    "artifact_sha256": "0f3962dc68b2b16b6670ef3833e430009034a02f81f86b6540b87e5d8e5c28a1",
+    "files": {
+      "dataset.json": "5335828869149acb3bdade89dca90237171d00dfd74790350598397c7bcb948b",
+      "cases.jsonl": "57fa5a1ec9442fdb4e1959431b58201edb2360278c7972336017c2f784e69e00",
+      "policy.md": "a5f9ea3ae64b30eb3c85b9bc143bff4111ce921e9ebbc6de77aa9c2396446590",
+      "output-schema.json": "2e744cdc489f2e3d4e470d63ae5f7ef882912989cdbe62290d12e460e173cb4e"
+    }
+  },
+  "transforms": [
+    "base",
+    "tier",
+    "one_contact",
+    "repeat_contact",
+    "instruction_pressure",
+    "unrelated_history"
+  ],
+  "caveats": [
+    "Scenario text, reference labels and transformations share an authoring process; deterministic checks cannot establish their independent correctness.",
+    "No claim of random generation, independent model critique, or verified human review."
+  ]
+}

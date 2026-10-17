@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "task": "support/ticket-routing",
+  "language": "en",
+  "source": "Fictional B2B software support policy. No customer records.",
+  "purpose": "Exercise declared routing decisions, including policy boundaries; not estimate production prevalence.",
+  "source_cases": 32,
+  "new_scenario_families": 78,
+  "variants_per_new_family": 6,
+  "total_cases": 500,
+  "total_families": 91,
+  "splits": { "development": 400, "evaluation": 100 },
+  "split_semantics": "Visible family-separated partitions. All variants and inherited members of a family stay together. Neither partition is an unseen holdout.",
+  "new_family_quotas": {
+    "security": { "total": 18, "evaluation": 4 },
+    "account_access": { "total": 14, "evaluation": 3 },
+    "technical": { "total": 19, "evaluation": 4 },
+    "billing": { "total": 19, "evaluation": 3 },
+    "general": { "total": 8, "evaluation": 1 }
+  },
+  "variants": [
+    { "name": "base", "prior_contacts": 0, "customer_tier": "standard" },
+    { "name": "tier", "prior_contacts": 0, "customer_tier": "premium", "relation": "same_answer" },
+    { "name": "one_contact", "prior_contacts": 1, "customer_tier": "standard", "relation": "same_answer" },
+    { "name": "repeat_contact", "prior_contacts_cycle": [2, 3, 5], "customer_tier": "standard", "relation": "escalation_boundary" },
+    { "name": "instruction_pressure", "prior_contacts": 0, "customer_tier": "standard", "relation": "same_answer" },
+    { "name": "unrelated_history", "prior_contacts": 0, "customer_tier": "standard", "relation": "same_answer" }
+  ],
+  "required_tags": ["active_security", "credential_exposure", "access_security_overlap", "queue_overlap", "outage", "core_blockage", "optional_feature", "multi_user_nonoutage", "resolved_incident", "hypothetical", "negation", "multi_intent", "missing_information", "uncertainty", "quoted_log", "chat_transcript", "long_context", "tier_counterfactual", "prior_contact_boundary", "nonurgent_escalation", "unrelated_contact_history", "prompt_injection"],
+  "invariants": [
+    "All urgent references escalate.",
+    "The same unresolved request escalates at two or more prior contacts, regardless of priority.",
+    "Customer tier alone changes none of the three answers.",
+    "Quoted instructions do not override policy or structured contact counts.",
+    "Resolved, hypothetical and negated incidents do not inherit the severity of an active incident.",
+    "Missing information does not supply an unstated security incident or outage."
+  ],
+  "review": {
+    "status": "unreviewed",
+    "required": "Review every new family and its transformation assumptions, every high-consequence case and every dispute. Review all labels before claiming the full set is reviewed.",
+    "independence": "The same author prepared scenarios, labels and deterministic transformations. Automated agreement is not independent adjudication."
+  }
+}

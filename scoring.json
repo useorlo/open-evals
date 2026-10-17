@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "primary": "whole_answer_exact",
+  "interpretation": "All metrics compare answers with provisional references. They do not independently establish domain correctness.",
+  "queue_labels": ["security", "account_access", "technical", "billing", "general"],
+  "priority_labels": ["normal", "high", "urgent"],
+  "priority_loss": {
+    "unit": "relative_error_points",
+    "rationale": "Proposed asymmetric severity weights: under-prioritizing an urgent reference is costlier than over-prioritizing a normal one. These weights have not been validated against operational costs and are not dollars.",
+    "matrix": {
+      "normal": { "normal": 0, "high": 1, "urgent": 3 },
+      "high": { "normal": 4, "high": 0, "urgent": 1 },
+      "urgent": { "normal": 8, "high": 5, "urgent": 0 }
+    },
+    "invalid_answer": 8,
+    "maximum_per_case": 8
+  },
+  "metrics": ["whole_answer_exact", "schema_validity", "field_accuracy", "queue_precision_recall_f1", "priority_confusion", "priority_under_over_rates", "priority_weighted_loss", "escalation_precision_recall_f1", "missed_escalations", "unnecessary_escalations", "family_macro_accuracy", "all_variants_match_rate", "slice_breakdowns", "counterfactual_consistency"],
+  "missing_output": "failure_in_full_denominator",
+  "invalid_output": "No classification credit; maximum priority loss. Per-field value matches remain descriptive diagnostics only.",
+  "undefined_ratio": null,
+  "small_slice_support": 20,
+  "uncertainty": "Descriptive counts and rates only. No row-independent confidence intervals, significance tests or production generalization claim.",
+  "explanations_and_confidence": "Not requested or scored. The answer contract remains queue, priority and escalate.",
+  "release_eligible": false
+}

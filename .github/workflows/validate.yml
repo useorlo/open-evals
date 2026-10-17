@@ -1,0 +1,18 @@
+# Validate data and dependency-free scoring without provider keys or model calls.
+name: Validate Dataset
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [20, 22, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - run: node --test rich-score.test.mjs verify.test.mjs
+      - run: node cli.mjs validate --dataset .

@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "queue",
+    "priority",
+    "escalate"
+  ],
+  "properties": {
+    "queue": {
+      "type": "string",
+      "enum": [
+        "security",
+        "account_access",
+        "technical",
+        "billing",
+        "general"
+      ]
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "normal",
+        "high",
+        "urgent"
+      ]
+    },
+    "escalate": {
+      "type": "boolean"
+    }
+  }
+}
