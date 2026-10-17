@@ -1,0 +1,25 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:10.000
+A support-routing evaluation: two models, one written policy, twenty fictional tickets.
+
+00:00:10.000 --> 00:00:22.000
+Start with a written policy: queue, priority and escalation. Ticket text cannot rewrite the policy.
+
+00:00:22.000 --> 00:00:34.000
+Inspect versioned examples and their origin. These fictional labels still need human review.
+
+00:00:34.000 --> 00:00:46.000
+Exact JSON grading: no model judge. Key order is ignored; wrong values and extra fields fail.
+
+00:00:46.000 --> 00:01:02.000
+Both models chose Technical; our provisional label says Security. The policy does not explicitly resolve this overlap.
+
+00:01:02.000 --> 00:01:16.000
+Both matched 19 of 20 references. Neither outscored the other on any ticket. Combined estimated cost: about $0.07.
+
+00:01:16.000 --> 00:01:28.000
+More evidence needed. Clarify the policy and review the label before a new comparison.
+
+00:01:28.000 --> 00:01:38.000
+Review the disputed label. Version the change. Test new cases. Keep the original result.

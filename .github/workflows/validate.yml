@@ -16,3 +16,5 @@ jobs:
           node-version: ${{ matrix.node }}
       - run: node --test rich-score.test.mjs verify.test.mjs
       - run: node cli.mjs validate --dataset .
+      - run: node replay-study.mjs
+      - run: node --test studies/support-routing-2026-10-16/pilot.test.mjs

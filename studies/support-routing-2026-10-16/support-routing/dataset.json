@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "support/ticket-routing",
+  "version": "0.1.0",
+  "status": "local_draft",
+  "policy": "policy.md",
+  "cases": "cases.jsonl",
+  "output_schema": "output-schema.json",
+  "case_count": 20,
+  "splits": {
+    "development": 14,
+    "regression": 6
+  },
+  "grading": {
+    "method": "json_exact",
+    "version": 1,
+    "primary": "whole_answer_exact",
+    "diagnostics": [
+      "per_field_accuracy",
+      "escalation_recall",
+      "priority_confusion"
+    ],
+    "missing_output": "failure",
+    "missing_label": "invalid_dataset",
+    "release_eligible": false
+  },
+  "review": {
+    "human_reviewed_cases": 0,
+    "public_release_allowed": false
+  },
+  "license": {
+    "data": "UNLICENSED",
+    "code": "UNLICENSED",
+    "documentation": "UNLICENSED"
+  },
+  "limits": [
+    "Fictional policy and AI-authored labels; independent human review pending.",
+    "All records are visible and may be reused; no fresh holdout claim.",
+    "Related cases share family_id; 20 records are not 20 independent scenario families.",
+    "No production prevalence, accuracy or release-suitability claim."
+  ]
+}

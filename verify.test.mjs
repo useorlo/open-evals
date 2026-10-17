@@ -6,6 +6,7 @@ import {fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
 import {load,digest} from './cli.mjs';
 import {summarizeDetailed} from './rich-score.mjs';
+import {collectAnswers} from './collect-orlo.mjs';
 const directory=fileURLToPath(new URL('./',import.meta.url)),pack=await load(directory);
 
 test('every published file matches its checksum',async()=>{
@@ -46,4 +47,16 @@ test('no answers are failures, and reference self-scoring is only a fixture test
 test('the documented CLI works without dependencies and scores a partition',()=>{
   const run=spawnSync(process.execPath,[directory+'cli.mjs','baseline','--dataset',directory,'--split','evaluation'],{encoding:'utf8',timeout:5000});
   assert.equal(run.status,0,run.stderr);const result=JSON.parse(run.stdout);assert.equal(result.support,100);assert.equal(result.dataset.artifact_sha256,pack.artifact_sha256);assert.equal(result.dataset.partition,'evaluation');
+});
+test('the historical no-key replay verifies all forty grades',()=>{
+  const run=spawnSync(process.execPath,[directory+'replay-study.mjs'],{encoding:'utf8',timeout:5000});assert.equal(run.status,0,run.stderr);
+  const result=JSON.parse(run.stdout);assert.equal(result.saved_answers_verified,40);assert.equal(result.model_calls,0);assert.deepEqual(result.results.map(r=>r.matches),[19,19]);
+});
+test('collection keeps unattempted and failed answers and refuses mismatched references',()=>{
+  const samples=pack.cases.map(c=>({input:c.input,expected_output:c.expected_output,provenance:{artifact_sha256:pack.artifact_sha256}}));
+  const examples=[{...samples[0],results:[{candidate_id:'candidate',output:pack.cases[0].expected_output,grader_scores:{execution:{failed:false}}}]},{...samples[1],results:[{candidate_id:'candidate',output:pack.cases[1].expected_output,grader_scores:{execution:{failed:true}}}]}];
+  const answers=collectAnswers(pack,{samples},examples,{id:'candidate'});assert.equal(answers.length,500);assert.equal(answers.filter(a=>a.output!==null).length,1);
+  const altered=structuredClone(samples);altered[0].expected_output.escalate=!altered[0].expected_output.escalate;
+  assert.throws(()=>collectAnswers(pack,{samples:altered},examples,{id:'candidate'}));
+  assert.throws(()=>collectAnswers(pack,{samples},[...examples,examples[0]],{id:'candidate'}));
 });

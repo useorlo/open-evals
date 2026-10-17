@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "dataset": "support/ticket-routing",
+  "dataset_version": "0.1.0",
+  "artifact_sha256": "72536835ab5c4ae92ffe7dd5493de629069a0968f8fff42d1c9cdb714c70acce",
+  "artifact_files": {
+    "dataset.json": "af767dada3a56d2478482a50faa8186aeb29ccedc802235c37ef3112ad9cce32",
+    "cases.jsonl": "0fa936a9edad42d3816493237a95bc61ad723078e260d7dad76219f6477b83ee",
+    "policy.md": "fff0a1d611ccc99b41b7469cd6bdd925254dde2da3c3efef37096d0fa40936e2",
+    "output-schema.json": "2e744cdc489f2e3d4e470d63ae5f7ef882912989cdbe62290d12e460e173cb4e"
+  },
+  "dataset_history": {
+    "commit": "b695b7bf0be7af54650f4bd19dacc32cc1adfd6b",
+    "committed_at": "2026-10-16T14:21:06-07:00",
+    "bytes_match": true,
+    "independent_timestamp_attestation": false
+  },
+  "comparison_settings": {
+    "file": "comparison-settings.json",
+    "sha256": "baee671e8d549d7248f307bb9eb95cf18bfb1b98105739ff38e8a0322c219318",
+    "provenance": "Normalized from the saved comparison request; private record IDs omitted.",
+    "hash_recorded_on": "2026-10-17",
+    "prepublished_preregistration": false
+  },
+  "execution": {
+    "created_at": "2026-10-16T21:25:21.540Z",
+    "started_at": "2026-10-16T21:25:21.565Z",
+    "completed_at": "2026-10-16T21:26:13.942Z",
+    "comparison_runs": 1,
+    "saved_answers_per_case_per_model": 1,
+    "ledger_calls": 40,
+    "ledger_failed_calls": 0,
+    "extra_ledger_calls": 0,
+    "original_outbound_requests_archived": false
+  },
+  "models": [
+    {
+      "provider": "openai",
+      "requested_model": "gpt-5.4",
+      "returned_model": "gpt-5.4-2026-03-05",
+      "calls": 20,
+      "input_tokens": 10057,
+      "output_tokens": 363,
+      "request_parameters": {
+        "max_completion_tokens": 4096,
+        "temperature": null,
+        "reasoning_effort": null,
+        "seed": null
+      },
+      "parameter_evidence": "Reconstructed from the unchanged caller and compatibility source used by the pilot. Null means not sent, not zero; the effective provider defaults were not captured.",
+      "frozen_specification_hash": "b4b97e17fcb7a860305cb69b46464011f8d2e95f94c2671ba889a4bfcff8be7e"
+    },
+    {
+      "provider": "anthropic",
+      "requested_model": "claude-sonnet-4-6",
+      "returned_model": "claude-sonnet-4-6",
+      "calls": 20,
+      "input_tokens": 11154,
+      "output_tokens": 346,
+      "request_parameters": {
+        "max_tokens": 4096,
+        "temperature": 0,
+        "thinking": null,
+        "effort": null,
+        "seed": null
+      },
+      "parameter_evidence": "Reconstructed from the unchanged caller and compatibility source used by the pilot. Null means not sent; extended thinking was not requested.",
+      "frozen_specification_hash": "bbca364a9d2454715fe7aeec1dac9dbe72543b333b079858ff98de93d795a915"
+    }
+  ],
+  "observations": {
+    "both_match": 19,
+    "both_differ": 1,
+    "only_openai_matches": 0,
+    "only_anthropic_matches": 0,
+    "shared_reference_disagreements": [
+      "support-008"
+    ],
+    "combined_reported_tokens": 21920,
+    "estimated_cost_usd": 0.0692395,
+    "invoice_verified": false
+  },
+  "reproducibility": {
+    "saved_answer_grading": "replayed and matched all 40 grades",
+    "new_generation": "Not guaranteed to reproduce saved answers. Sampling and serving behavior can vary; original wire requests were not archived.",
+    "promptfoo": "Exported assertions tested independently; export not verified inside promptfoo."
+  }
+}
